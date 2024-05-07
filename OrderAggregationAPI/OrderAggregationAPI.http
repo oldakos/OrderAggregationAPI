@@ -1,0 +1,15 @@
+﻿@OrderAggregationAPI_HostAddress = https://localhost:7086
+
+POST {{OrderAggregationAPI_HostAddress}}/order
+Content-Type: application/json
+
+[
+    {
+      "productId": "456",
+      "quantity": 5
+    },
+    {
+      "productId": "789",
+      "quantity": 42
+    }
+]
