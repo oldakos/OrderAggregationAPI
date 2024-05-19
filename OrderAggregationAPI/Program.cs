@@ -1,5 +1,6 @@
 using OrderAggregationAPI.BackgroundWorker;
 using OrderAggregationAPI.Dataclasses;
+using System.IO;
 
 namespace OrderAggregationAPI
 {
