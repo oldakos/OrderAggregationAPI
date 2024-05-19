@@ -79,3 +79,4 @@ Navrhněte webovou službu, která:
 - ~~Background worker is sending empty orders, make it do nothing and wait for another time period instead~~
 - Load testing?
 - More / better unit testing?
+- Better file organization than "put it all in the root folder"
