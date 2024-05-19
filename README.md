@@ -80,3 +80,5 @@ Navrhněte webovou službu, která:
 - Load testing?
 - More / better unit testing?
 - Better file organization than "put it all in the root folder"
+- Couldn't help but check the repo one last time
+    - I could have sworn I deleted the separate background worker project and implemented it in the main project instead, but it seems I forgot it in git.
