@@ -23,9 +23,10 @@ namespace OrderAggregationAPI
             app.Run();
         }
 
-        static IResult BasicInformation()
+        static void BasicInformation(HttpContext context)
         {
-            return TypedResults.Ok("Use the `POST /order` endpoint to submit your order.");
+            context.Response.ContentType = "text/plain; charset=UTF-8";
+            context.Response.WriteAsync("Use the `POST /order` endpoint to submit your order.");
         }
 
         static IResult CreateOrder(List<ProductQuantity> items, IOrderPersistenceProvider persistenceProvider)
