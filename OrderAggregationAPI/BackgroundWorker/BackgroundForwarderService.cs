@@ -2,6 +2,9 @@
 {
     //see https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-8.0&tabs=visual-studio
 
+    /// <summary>
+    /// On a timer, sends Orders from a persistence provider using a sender.
+    /// </summary>
     public class BackgroundForwarderService : IHostedService, IDisposable
     {
         private int _period_seconds;

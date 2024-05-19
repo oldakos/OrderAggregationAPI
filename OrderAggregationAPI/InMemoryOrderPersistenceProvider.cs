@@ -5,10 +5,19 @@ using System.Collections.Concurrent;
 
 namespace OrderAggregationAPI
 {
+    /// <summary>
+    /// An in-memory container that "adds up" ProductQuantity objects with thread-safe access.
+    /// </summary>
     public class InMemoryOrderPersistenceProvider : IOrderPersistenceProvider
     {
         private ConcurrentDictionary<string, int> _products = new ConcurrentDictionary<string, int>();
 
+        /// <summary>
+        /// Apply the given Func to the amount of the given product.
+        /// </summary>
+        /// <param name="key">The productId</param>
+        /// <param name="updateFunc">The Func to be applied to the amount of the given productId</param>
+        /// <returns>`true` if the value was updated. `false` if the ID doesn't exist.</returns>
         private bool TryUpdate(string key, Func<int, int> updateFunc)
         {
             int currentValue;
