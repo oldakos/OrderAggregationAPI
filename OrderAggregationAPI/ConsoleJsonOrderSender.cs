@@ -15,6 +15,14 @@ namespace OrderAggregationAPI
 
         public bool TrySend(IEnumerable<ProductQuantity> order)
         {
+            //we consider empty orders unwanted by recipient
+            //but allowed for any code that uses this sender class
+            //therefore, don't actually send but return `true`
+            if(order == null || order.Count() < 1)
+            {
+                return true;
+            }
+
             try
             {
                 var json = JsonSerializer.Serialize(order);
