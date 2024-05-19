@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderAggregationAPI", "OrderAggregationAPI\OrderAggregationAPI.csproj", "{38F3872D-56C5-4242-96AC-08A2DDFCAE38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderAggregationAPI", "OrderAggregationAPI\OrderAggregationAPI.csproj", "{38F3872D-56C5-4242-96AC-08A2DDFCAE38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderAggregationAPITests", "OrderAggregationAPITests\OrderAggregationAPITests.csproj", "{8D4BBDED-2043-4511-A045-63D2AECB6DB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderAggregationAPITests", "OrderAggregationAPITests\OrderAggregationAPITests.csproj", "{8D4BBDED-2043-4511-A045-63D2AECB6DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2ETests", "E2ETests\E2ETests.csproj", "{8AA33A86-D752-4E18-9A33-795AB8BFE2ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D4BBDED-2043-4511-A045-63D2AECB6DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D4BBDED-2043-4511-A045-63D2AECB6DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D4BBDED-2043-4511-A045-63D2AECB6DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA33A86-D752-4E18-9A33-795AB8BFE2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA33A86-D752-4E18-9A33-795AB8BFE2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA33A86-D752-4E18-9A33-795AB8BFE2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA33A86-D752-4E18-9A33-795AB8BFE2ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
