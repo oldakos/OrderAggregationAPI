@@ -45,6 +45,12 @@ Navrhněte webovou službu, která:
 	- We could just add a final aggregator to collect from all our load-balanced aggregators
 - If some asynchronous core system sending was required, it may be a bit of a rework
 	- The background worker gets a DI'd object for sending, but the interface for senders is synchronous - the background worker waits until rejection or confirmation by sender and then restarts its timer
+- When a bad request gets sent, the webservice returns the stacktrace. This will not do in production.
+	- (It's all good) - ASP NET Core actually hides that when built with the "Production" environment value.
+- For testing, I needed a more versatile IOrderSender (one observable by test classes) than the one that just writes to `Console`. Decided to still keep the Console one and just add another one for testing. It's worse test coverage in some sense, but it really doesn't matter here.
+	- Also, the implicit dependency (on system console) is a shitty practice. I'm aware of it and I'm leaving it in to save myself the effort at this point.
+- We hate absolute coupling between classes, but having a simple class as a config container for another class I consider okay.
+- On last revision, I notice there are some random unused `using` lines. I'm just going to ignore those for this task.
 
 ## Questions for Team and/or Stakeholders
 
@@ -69,5 +75,7 @@ Navrhněte webovou službu, která:
 
 ## Todo
 
-- Figure out how to run functional tests against the entire webservice if possible
-- Background worker is sending empty orders, make it do nothing and wait for another time period instead
+- ~~Figure out how to run functional tests against the entire webservice if possible~~
+- ~~Background worker is sending empty orders, make it do nothing and wait for another time period instead~~
+- Load testing?
+- More / better unit testing?
